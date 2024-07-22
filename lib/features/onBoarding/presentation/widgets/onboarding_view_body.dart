@@ -36,19 +36,26 @@ class OnBoardingViewBody extends StatelessWidget {
                     "Amet minim mollit non deserunt ullamco est\n    sit aliqua dolor do amet sint. Velit officia\n        consequat duis enim velit mollit.",
               ),
               SizedBox(
-                height: 150.sp,
+                height: 140.sp,
               ),
-              Center(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomSmoothPage(controller: _controller),
-                    Text(
-                      "Next",
-                      style: CustomTextStyle.nextWord,
-                    ),
-                  ],
+              Padding(
+                padding: EdgeInsets.only(left: 85.0.sp),
+                child: SizedBox(
+                  width: 180.sp,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      CustomSmoothPage(controller: _controller),
+                      Padding(
+                        padding: EdgeInsets.only(left: 60.0.sp),
+                        child: Text(
+                          "Next",
+                          style: CustomTextStyle.nextWord,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

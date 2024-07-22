@@ -6,10 +6,12 @@ abstract class CustomTextStyle {
   static final montserratSemiBold = TextStyle(
     fontFamily: "Montserrat-SemiBold",
     color: AppColors.someWordsColor,
+    fontSize: 18.sp,
   );
-  static const montserratSemiBoldBlack = TextStyle(
+  static final montserratSemiBoldBlack = TextStyle(
     fontFamily: "Montserrat-SemiBold",
     color: Colors.black,
+    fontSize: 18.sp,
   );
   static final montserratExtraBoldBlack = TextStyle(
     fontFamily: "Montserrat-ExtraBold",
@@ -22,7 +24,7 @@ abstract class CustomTextStyle {
   );
   static final nextWord = TextStyle(
     color: AppColors.primaryColor,
-    fontSize: 18.sp,
     fontFamily: "Montserrat-SemiBold",
+     fontSize: 18.sp,
   );
 }

@@ -13,15 +13,18 @@ class CustomOnBoardingAppBar extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
-          const Text("1"),
+          Text(
+            "1",
+            style: CustomTextStyle.montserratSemiBoldBlack,
+          ),
           Text(
             "/3",
             style: CustomTextStyle.montserratSemiBold,
           ),
           SizedBox(
-            width: 247.sp,
+            width: 210.sp,
           ),
-           const Align(
+          Align(
               alignment: Alignment.topRight,
               child: Text(
                 "Skip",
