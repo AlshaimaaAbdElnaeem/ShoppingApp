@@ -7,17 +7,13 @@ class OnBoardingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-             const CustomOnBoardingAppBar(),
-            OnBoardingViewBody()
-          ],
+        child: ListView(
+          physics: const BouncingScrollPhysics(),
+          children: [const CustomOnBoardingAppBar(), OnBoardingViewBody()],
         ),
       ),
     );
   }
 }
-
-

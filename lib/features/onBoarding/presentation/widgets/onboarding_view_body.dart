@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/core/utils/assets_app.dart';
-import 'package:shopping_app/core/utils/custom_text_style.dart';
 import 'package:shopping_app/features/onBoarding/presentation/widgets/custom_details_onboarding.dart';
-import 'package:shopping_app/features/onBoarding/presentation/widgets/custom_smooth_page.dart';
+import 'package:shopping_app/features/onBoarding/presentation/widgets/custom_onboarding_image.dart';
+import 'package:shopping_app/features/onBoarding/presentation/widgets/custom_text_footer.dart';
 import 'package:shopping_app/features/onBoarding/presentation/widgets/custom_title.dart';
 import 'package:sizer/sizer.dart';
 
@@ -13,18 +12,16 @@ class OnBoardingViewBody extends StatelessWidget {
   final PageController _controller = PageController();
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height: 700.sp,
       child: PageView.builder(
+        physics: const BouncingScrollPhysics(),
         controller: _controller,
         itemCount: 3,
         itemBuilder: (BuildContext context, int index) {
           return Column(
             children: [
-              Image.asset(
-                Assets.imagesOnBoarding1,
-                width: 300.sp,
-                height: 300.sp,
-              ),
+              const CustomOnBoardingImage(),
               const TitleWidgetOnBoarding(
                 text: 'Choose Products',
               ),
@@ -34,30 +31,12 @@ class OnBoardingViewBody extends StatelessWidget {
               const DetailsWidgetOnBoarding(
                 text:
                     "Amet minim mollit non deserunt ullamco est\n    sit aliqua dolor do amet sint. Velit officia\n        consequat duis enim velit mollit.",
+             
               ),
               SizedBox(
                 height: 140.sp,
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 85.0.sp),
-                child: SizedBox(
-                  width: 180.sp,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      CustomSmoothPage(controller: _controller),
-                      Padding(
-                        padding: EdgeInsets.only(left: 60.0.sp),
-                        child: Text(
-                          "Next",
-                          style: CustomTextStyle.nextWord,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              CustomTextFooter(controller: _controller),
             ],
           );
         },
@@ -65,3 +44,5 @@ class OnBoardingViewBody extends StatelessWidget {
     );
   }
 }
+
+
