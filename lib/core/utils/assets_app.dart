@@ -12,5 +12,9 @@ class Assets {
   /// Assets for imagesOnBoarding3
   /// assets/images/onBoarding3.jpg
   static const String imagesOnBoarding3 = "assets/images/onBoarding3.jpg";
+
+  /// Assets for imagesSlashPage
+  /// assets/images/slash_page.png
+  static const String imagesSlashPage = "assets/images/slash_page.png";
 }
 
